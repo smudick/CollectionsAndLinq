@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CollectionsAndLinq.LinqExamples;
 
 namespace CollectionsAndLinq
 {
@@ -37,6 +38,12 @@ namespace CollectionsAndLinq
             e13.ForEach(name => { Console.WriteLine(name); });
 
             e13.Remove("Wanda");
+
+            var a1 = new A<int>();
+            var a2 = new A<string>();
+
+            a1.DoStuff(123);
+            a2.DoStuff("Other stuff");
 
             //////////////Dictionary<TKey, TValue>/////////////
             
@@ -151,14 +158,8 @@ namespace CollectionsAndLinq
                 Console.WriteLine($"currently dequeueing: queue : {queue.Dequeue()}");
             }
 
-
-
-
-            var a1 = new A<int>();
-            var a2 = new A<string>();
-
-            a1.DoStuff(123);
-            a2.DoStuff("Other stuff");
+            var examples = new Examples();
+            examples.Run();
 
         }
     }
